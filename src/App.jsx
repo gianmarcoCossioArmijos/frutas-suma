@@ -70,9 +70,9 @@ function App() {
         Generar
       </button>
 
-      <section className='flex flex-col gap-4'>
+      <section className='w-full flex flex-col md:flex-row gap-4'>
 
-        <div className='min-h-[300px] bg-black rounded-lg text-5xl'>
+        <div className='w-full md:w-1/2 min-h-[300px] bg-black rounded-lg text-5xl'>
           <h4>{izquierda}</h4>
 
           <div className='w-full flex flex-wrap justify center'>
@@ -107,7 +107,7 @@ function App() {
 
         </div>
 
-        <div className='min-h-[300px] bg-black rounded-lg text-5xl'>
+        <div className='w-full md:w-1/2 min-h-[300px] bg-black rounded-lg text-5xl'>
           <h4>{derecha}</h4>
 
           <div className='w-full flex flex-wrap justify center'>
@@ -141,9 +141,11 @@ function App() {
           </div>
         </div>
 
-        <form
+      </section>
+
+      <form
             onSubmit={handleSubmit}
-            className='flex  flex-col gap-4'>
+            className='w-full flex  flex-col gap-4'>
           <input
               type="number"
               name='respuesta'
@@ -158,8 +160,6 @@ function App() {
               value="Verificar"
               className='p-3 bg-lime-500 hover:bg-lime-600 rounded-lg text-xl font-bold'/>
         </form>
-
-      </section>
 
     </main>
   )
